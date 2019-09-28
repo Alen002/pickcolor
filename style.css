@@ -1,0 +1,25 @@
+body {
+    background-color: lightblue;
+}
+
+li {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button {
+    width: 10%;
+    height: 80px;;
+    padding-right: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+
+}
+
+button:hover {
+    background-color: lightgrey;
+    opacity: 0.4;
+}
+
+
