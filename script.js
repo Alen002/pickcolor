@@ -46,5 +46,6 @@ function startGame() {
         startGame();
      } else {
          document.querySelector('span').textContent = times;
+         document.querySelectorAll('button')[id-1].style.backgroundColor = 'lightblue';
      }
  }
