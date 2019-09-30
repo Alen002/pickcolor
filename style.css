@@ -3,6 +3,7 @@ body {
 }
 
 li {
+    margin-top: 20px;
     list-style: none;
     padding-top: 10px;
     padding-bottom: 10px;
