@@ -2,17 +2,24 @@ body {
     background-color: lightblue;
 }
 
+ul {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
 li {
-    margin-top: 20px;
-    list-style: none;
+    /**margin-top: 20px;
+    
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 10px;*/
+    list-style: none;
 }
 
 button {
-    width: 10%;
-    height: 80px;;
-    padding-right: 20px;
+    width: 30%;
+    height: 80px;
+    padding-bottom: 30%;
     margin-right: 10px;
     border-radius: 10px;
 
