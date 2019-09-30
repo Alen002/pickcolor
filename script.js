@@ -1,7 +1,9 @@
 console.log('js is working');
 let buttons = document.querySelectorAll('button')
 
+
 function startGame() {
+    times = 0; //is used as a global variable
     // Create the color which needs to be guessed
     let randomRed = Math.random()*255;
     resultRed = Math.round(randomRed);
@@ -29,12 +31,17 @@ function startGame() {
     console.log(randomArrayResult)
        
     document.querySelectorAll('button')[randomArrayResult].style.backgroundColor = 'rgb(' +resultRed+ ',' +resultGreen+ ',' +resultRed+ ')';
+    return times;
 }
 
+
  function checkResult(result) {
-     let id = result;
      
+     let id = result;
+     times +=1;
      if(id == randomArrayResult ) {
         alert('You guessed it right');
+     } else {
+         document.querySelector('span').textContent = times;
      }
  }
