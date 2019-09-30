@@ -1,4 +1,5 @@
 console.log('js is working');
+let buttons = document.querySelectorAll('button')
 
 function startGame() {
     // Create the color which needs to be guessed
@@ -12,13 +13,8 @@ function startGame() {
     let resultBlue = Math.round(randomBlue);
 
     document.querySelector('#showRGB').textContent = (resultRed + ' ' + resultGreen + ' ' + resultBlue);
-    
-    
-    
-    
+        
     //Fill all rectangles with random color
-    let buttons = document.querySelectorAll('button')
-    
     buttons.forEach((entries) => {
         resultR = Math.round(Math.random()*255);
         resultG = Math.round(Math.random()*255);
@@ -27,18 +23,18 @@ function startGame() {
 
     })
     
-         
-
     //Create the random array
     randomArray = Math.random()*5;
     randomArrayResult = Math.round(randomArray);
     console.log(randomArrayResult)
        
     document.querySelectorAll('button')[randomArrayResult].style.backgroundColor = 'rgb(' +resultRed+ ',' +resultGreen+ ',' +resultRed+ ')';
-    document.querySelectorAll('button')[randomArrayResult].innerHTML = 'CORRECT'; 
-    
 }
 
-function checkResult() {
-
-}
+ function checkResult(result) {
+     let id = result;
+     
+     if(id == randomArrayResult ) {
+        alert('You guessed it right');
+     }
+ }
