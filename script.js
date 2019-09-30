@@ -4,6 +4,7 @@ let buttons = document.querySelectorAll('button')
 
 function startGame() {
     times = 0; //is used as a global variable
+    
     // Create the color which needs to be guessed
     let randomRed = Math.random()*255;
     resultRed = Math.round(randomRed);
@@ -41,6 +42,8 @@ function startGame() {
      times +=1;
      if(id == randomArrayResult ) {
         alert('You guessed it right');
+        document.querySelector('span').textContent = 0;
+        startGame();
      } else {
          document.querySelector('span').textContent = times;
      }
