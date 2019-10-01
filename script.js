@@ -15,7 +15,7 @@ function startGame() {
     let randomBlue = Math.random()*255;
     let resultBlue = Math.round(randomBlue);
 
-    document.querySelector('#showRGB').textContent = (resultRed + ' ' + resultGreen + ' ' + resultBlue);
+    document.querySelector('#showRGB').innerHTML = (resultRed + ' ' + resultGreen + ' ' + resultBlue);
         
     //Fill all rectangles with random color
     buttons.forEach((entries) => {
@@ -42,10 +42,10 @@ function startGame() {
      times +=1;
      if(id == randomArrayResult ) {
         alert('You guessed it right');
-        document.querySelector('span').textContent = 0;
+        document.querySelector('#attempts').textContent = 0;
         startGame();
      } else {
-         document.querySelector('span').textContent = times;
+         document.querySelector('#attempts').textContent = times;
          document.querySelectorAll('button')[id-1].style.backgroundColor = 'lightblue';
      }
  }
